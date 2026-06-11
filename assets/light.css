@@ -914,7 +914,8 @@ h1, h2, h3 {
 /* ---------- CTA / 页脚 ---------- */
 
 .closing {
-  padding: 110px 0 100px;
+  padding: 96px 0 0;
+  scroll-margin-top: 104px;
   text-align: center;
 }
 
@@ -930,6 +931,97 @@ h1, h2, h3 {
   color: var(--ink-soft);
   font-size: 15.5px;
   line-height: 2;
+}
+
+.contact-directory {
+  max-width: 980px;
+  margin: 64px auto 0;
+  text-align: left;
+}
+
+.contact-directory-head {
+  display: block;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.contact-directory-head h3 {
+  margin-top: 8px;
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 92px;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 16px 36px rgba(60, 45, 25, 0.06);
+}
+
+.contact-card.is-teacher {
+  border-color: rgba(166, 42, 35, 0.28);
+  background: rgba(255, 249, 240, 0.82);
+}
+
+.contact-role {
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-card h4 {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contact-card p {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.contact-qr {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  padding: 10px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(166, 42, 35, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(166, 42, 35, 0.06) 1px, transparent 1px),
+    rgba(255, 255, 255, 0.86);
+  background-size: 14px 14px;
+  color: var(--ink-faint);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.closing .footer {
+  margin-top: 72px;
 }
 
 .footer {
@@ -1504,7 +1596,7 @@ h1, h2, h3 {
 
 /* 收尾 CTA：上下留白平衡，不再贴底 */
 .closing {
-  padding: 72px 0 150px;
+  padding: 72px 0 0;
 }
 
 /* ---------- 手机端文字防溢出 ---------- */
@@ -1709,8 +1801,8 @@ h1, h2, h3 {
   }
 
   .closing {
-    padding-top: 76px;
-    padding-bottom: 96px;
+    padding-top: 52px;
+    padding-bottom: 0;
   }
 
   .closing h2 {
@@ -1725,6 +1817,55 @@ h1, h2, h3 {
     margin-top: 16px;
     font-size: 14px;
     line-height: 1.9;
+  }
+
+  .closing .hero-actions {
+    margin-top: 32px;
+  }
+
+  .contact-directory {
+    margin-top: 44px;
+  }
+
+  .contact-directory-head {
+    display: block;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .contact-directory-head h3 {
+    margin-top: 8px;
+    font-size: 24px;
+  }
+
+  .contact-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .contact-card {
+    display: block;
+    padding: 14px;
+  }
+
+  .contact-card h4 {
+    font-size: 18px;
+  }
+
+  .contact-card p {
+    font-size: 12.5px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-qr {
+    width: 100%;
+    height: 90px;
+    margin-top: 12px;
+  }
+
+  .closing .footer {
+    margin-top: 48px;
   }
 
   .product-card,
@@ -1809,5 +1950,11 @@ h1, h2, h3 {
 
   .footer-inner {
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 370px) {
+  .contact-card-grid {
+    grid-template-columns: 1fr;
   }
 }
