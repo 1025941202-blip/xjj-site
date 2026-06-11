@@ -1425,3 +1425,180 @@ h1, h2, h3 {
 .closing {
   padding: 72px 0 150px;
 }
+
+/* ---------- 手机端文字防溢出 ---------- */
+
+@media (max-width: 620px) {
+  h1, h2, h3,
+  .grad,
+  .section-head p,
+  .lede,
+  .teacher-info p,
+  .panel-card p,
+  .product-card p,
+  .case-content p,
+  .day-card li,
+  .dot-list li,
+  .service-row p,
+  .faq-row p,
+  .contact-row p,
+  .lineup-figure figcaption p {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-glyph {
+    display: none;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 18px;
+    line-height: 1.55;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .hero-badge i {
+    flex: 0 0 auto;
+    margin-top: 0.45em;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.26;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-break: anywhere;
+  }
+
+  .hero h1 .grad,
+  .mission h2 .grad,
+  .closing h2 .grad {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-break: anywhere;
+  }
+
+  .hero h1 .grad {
+    font-size: 0.86em;
+  }
+
+  .hero .lede {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .button {
+    min-width: 0;
+    max-width: 100%;
+    padding-left: 22px;
+    padding-right: 22px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 150px;
+  }
+
+  .hero-stats {
+    max-width: 100%;
+  }
+
+  .hero-stat {
+    min-width: 0;
+    padding: 22px 12px 18px;
+  }
+
+  .hero-stat strong {
+    font-size: 26px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .mono-label,
+  .panel-card .num,
+  .bento-card .num,
+  .timeline-step .num,
+  .teacher-info .role,
+  .day-card .date,
+  .contact-row .label,
+  .lineup-figure figcaption span,
+  .footer-inner .mono-tag {
+    letter-spacing: 0.08em;
+    overflow-wrap: anywhere;
+  }
+
+  .section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .section-head {
+    margin-bottom: 36px;
+  }
+
+  .section-head h2,
+  .mission h2,
+  .closing h2,
+  .closing-grid h2 {
+    font-size: 30px !important;
+    line-height: 1.38 !important;
+  }
+
+  .product-card,
+  .case-content,
+  .panel-card,
+  .day-card {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .product-meta div {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .product-meta span:last-child {
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  .product-price strong {
+    font-size: 30px;
+  }
+
+  .product-card .button {
+    align-self: stretch;
+  }
+
+  .browser-bar {
+    min-width: 0;
+  }
+
+  .browser-bar .url {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .timeline-step h3 {
+    white-space: normal;
+  }
+
+  .lineup-figure figcaption p {
+    text-align: left;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+  }
+}
